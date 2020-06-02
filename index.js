@@ -6,6 +6,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.urlencoded());
 
 var contactList = [
     {
@@ -38,7 +39,14 @@ app.get('/practice', function(request, response){
 });
 
 app.post('/create-contact', function(request, response){
-    return response.redirect('/practice');
+    // return response.redirect('/practice');
+    // contactList.push({
+    //     name: request.body.name,
+    //     phone: request.body.phone
+    // });
+
+    contactList.push(request.body);
+    return response.redirect('back');
 });
 
 
