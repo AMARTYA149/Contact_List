@@ -6,9 +6,15 @@
     <title>
         <%= locals.title %>
     </title>
+    <script src="https://use.fontawesome.com/28644979d1.js"></script>
+    <!-- our css links should be at the bottom so that our css can override -->
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>Contact List</h1>
+    <h1 id="page-heading">
+    <i class="fa fa-paperclip"></i>
+        My Contact List
+    </h1>
     <div>
         <ul>
             <% for(let i of contact_list) { %>
@@ -30,5 +36,6 @@
         <button type="submit">Add Contact</button>
 
     </form>
+    <script src="/js/home.js" type="text/javascript"></script>
 </body>
 </html>
