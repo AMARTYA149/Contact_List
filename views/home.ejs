@@ -16,26 +16,38 @@
         My Contact List
     </h1>
     <div>
-        <ul>
+        <!-- <ul> -->
             <% for(let i of contact_list) { %>
-                <li>
+                <!-- <li> -->
+                    <div class="contact-container">
                     <p>
                         <%= i.name %>
                     </p>
                     <p>
                         <%= i.phone %>
                     </p>
-                </li>
+                    
+                    <div class="delete-button">
+                        
+                        <a href="/delete-contact/?phone=<%= i.phone %>">
+                            <i class="fa fa-window-close"></i>
+                        </a>
+                    </div>
+                    </div>
+                    
+                <!-- </li> -->
             <%}%>
-        </ul>
+        <!-- </ul> -->
     </div>
 
+    <div class="form-container">
     <form action="/create-contact" method="POST">
         <input type="text" name="name" placeholder="Enter Name" required>
         <input type="number" name="phone" placeholder="Enter Phone" required>
-        <button type="submit">Add Contact</button>
+        <button type="submit">ADD</button>
 
     </form>
+    </div>
     <script src="/js/home.js" type="text/javascript"></script>
 </body>
 </html>

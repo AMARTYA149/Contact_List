@@ -63,6 +63,19 @@ app.post('/create-contact', function(request, response){
     return response.redirect('back');
 });
 
+//for deleting a contact
+app.get('/delete-contact', function(request, response){
+    //get the query from the url
+    let phone = request.query.phone;
+
+    let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+
+    if(contactIndex != -1){
+        contactList.splice(contactIndex, 1);
+    }
+
+    return response.redirect('back');
+});
 
 
 app.listen(port, function(err){

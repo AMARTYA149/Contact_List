@@ -1,6 +1,8 @@
-body {
+* {
     margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    /* text-align: center; */
 }
 
 #page-heading {
@@ -12,3 +14,44 @@ body {
 ul {
     list-style: none;
 }
+
+.contact-container {
+    width: 30%;
+    height: auto;
+    margin: 5px auto;
+    background-color: skyblue;
+    display: flex;
+    color: white;
+    font-size: 0.9rem;
+    justify-content: space-between;
+}
+
+p{
+    padding: 1% 1%;
+}
+
+.contact-container:hover{
+    background-color: grey;
+}
+
+.form-container {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* text-align: left; */
+}
+
+.form-container input {
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.form-container button {
+    border: none;
+    padding: 5px;
+}
+
+
+
