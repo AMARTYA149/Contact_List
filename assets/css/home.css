@@ -14,7 +14,7 @@
 ul {
     list-style: none;
 }
-
+/* 
 .contact-container {
     width: 30%;
     height: auto;
@@ -32,7 +32,7 @@ p{
 
 .contact-container:hover{
     background-color: grey;
-}
+} */
 
 .form-container {
     width: 30%;
@@ -53,5 +53,52 @@ p{
     padding: 5px;
 }
 
+#contacts-list-container{
+    width: 30%;
+    margin: auto;
+}
 
+
+#contacts-list-container ul{
+    padding: 0;
+    list-style: none;    
+}
+
+.contact {
+    padding: 3px 10px;
+    border: 1px solid white;
+    background-color: skyblue;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    color: white;
+    display: flex;
+}
+
+.contact:hover{
+    background-color: grey;
+}
+
+.contact .delete-button a{
+    color: white;
+    background-color: red;
+}
+
+
+.contact .details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.contact .delete-button{
+    width: 10%;
+    /* padding: 3px; */
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact p{
+    margin: 5px 0;
+}
 

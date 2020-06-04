@@ -15,10 +15,10 @@
     <i class="fa fa-paperclip"></i>
         My Contact List
     </h1>
-    <div>
-        <!-- <ul> -->
+    <!-- <div>
+        <ul>
             <% for(let i of contact_list) { %>
-                <!-- <li> -->
+                <li>
                     <div class="contact-container">
                     <p>
                         <%= i.name %>
@@ -35,9 +35,31 @@
                     </div>
                     </div>
                     
-                <!-- </li> -->
+                </li>
             <%}%>
-        <!-- </ul> -->
+        </ul>
+    </div> -->
+
+    <div id="contacts-list-container">
+        <ul>
+            <% for(let i of contact_list) { %>
+                <li class="contact">
+                    <div class="details">
+                        <p>
+                            <%= i.name %>
+                        </p>
+                        <p>
+                            <%= i.phone %>
+                        </p>
+                    </div>
+                    <div class="delete-button">
+                        <a href="/delete-contact/?phone=<%= i.phone %>">
+                            <i class="fa fa-window-close"></i>
+                        </a>
+                    </div>
+                </li>  
+                <%}%>
+        </ul>
     </div>
 
     <div class="form-container">
