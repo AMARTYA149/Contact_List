@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = 8000;
+const port = 5000;
 
 const db = require('./config/mongoose');
 const Contact = require('./models/contact')
@@ -25,20 +25,20 @@ app.use(express.static('assets'));
 //     next();
 // });
 
-var contactList = [
-    {
-        name: "Amartya",
-        phone: "1111111111"
-    },
-    {
-        name: "Tony Stark",
-        phone: "9999999999"
-    },
-    {
-        name: "Bruce Wayne",
-        phone: "8888888888"
-    }
-]
+// var contactList = [
+//     {
+//         name: "Amartya",
+//         phone: "1111111111"
+//     },
+//     {
+//         name: "Tony Stark",
+//         phone: "9999999999"
+//     },
+//     {
+//         name: "Bruce Wayne",
+//         phone: "8888888888"
+//     }
+// ]
 
 app.get('/', function(request, response){
     // console.log(__dirname);
